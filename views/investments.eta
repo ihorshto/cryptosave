@@ -2,35 +2,21 @@
 
 <div class="container">
 
-  <div class="row">
-    <div class="col">
-      <ul class="nav">
-        <% /* <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="/nos-produits">Tous</a>
-				</li> */ %>
-        <% for (let i=0 ; i<it.types.length ; i++) { %>
-        <% let type = it.types[i] ; %>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/nos-produits?type=<%= type %>&toto=titi"><%= type %></a>
-        </li>
-        <% } %>
-      </ul>
-    </div>
-  </div>
 
   <div class="row py-3">
-    <% for (let i=0 ; i<it.products.length ; i++) { %>
-    <% let product = it.products[i] ; %>
+    <% for (let i=0 ; i<it.projectsList.length ; i++) { %>
+    <% let project = it.projectsList[i] ; %>
     <div class="col-sm-6 col-lg-4 pb-3">
       <div class="card text-center h-100">
-        <img src="/eternel-edelweiss-n1-bague-or-blanc.png" style="max-width:200px; align-self:center;" class="card-img-top" alt="...">
+        <img src="https://img.api.cryptorank.io/coins/polyhedra_network1676990904251.png" style="max-width:200px; align-self:center;" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text"><%= product.description %></p>
-          <a href="/nos-produits/<%= product.id %>" class="btn btn-primary">Voir le produit</a>
+          <a class="card-title" href="/investments/`<%= project.id %>`">
+            <h5><%= project.nom %></h5>
+          </a>
         </div>
       </div>
     </div>
     <% } %>
   </div>
+
 </div>
