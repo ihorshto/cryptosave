@@ -1,0 +1,22 @@
+<% layout("layout.eta") %>
+
+<div class="container">
+
+
+  <div class="row py-3">
+    <% for (let i=0 ; i<it.projectsList.length ; i++) { %>
+    <% let project = it.projectsList[i] ; %>
+    <div class="col-sm-6 col-lg-4 pb-3">
+      <div class="card text-center h-100">
+        <img src="https://img.api.cryptorank.io/coins/polyhedra_network1676990904251.png" style="max-width:200px; align-self:center;" class="card-img-top" alt="...">
+        <div class="card-body">
+          <a class="card-title" href="/investments/`<%= project.id %>`">
+            <h5><%= project.nom %></h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+</div>
